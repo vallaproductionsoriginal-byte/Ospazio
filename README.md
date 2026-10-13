@@ -4,7 +4,7 @@
 
 Ospazio permette di controllare larghezza, distribuzione e bilanciamento stereo fino a **otto bande**, con analizzatore di spettro e visualizzazione della larghezza stereo in uscita.
 
-**Versione 1.5.0 · build del 13 ottobre 2026**
+**Versione 1.5.0**
 
 ## Download
 
