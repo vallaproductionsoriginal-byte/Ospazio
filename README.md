@@ -6,6 +6,8 @@ Ospazio permette di controllare larghezza, distribuzione e bilanciamento stereo 
 
 **Versione 1.5.0**
 
+![Interfaccia di Ospazio 1.5.0: spettro, campo stereo e controlli per cinque bande](assets/Ospazio-editor.png)
+
 ## Download
 
 Scegli il formato supportato dalla tua DAW:
