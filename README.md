@@ -60,12 +60,12 @@ I bundle Mac hanno firma locale ad hoc e non sono notarizzati da Apple. Il VST3 
 
 ## Verifica dei download
 
-I checksum SHA-256 della build del 13 ottobre 2026 sono:
+I checksum SHA-256 dei pacchetti con licenza aggiornata il 15 ottobre 2026 sono:
 
 ```text
-c1a23484c6a657b4b7370b64497b23015aee7f103e9fa6b2b9e4020c4e8121c5  Ospazio-1.5.0-Windows-x64.vst3.zip
-b9f29305971ec51ecb67ac771a4ca70b3eb462c34436775607d8734f520d7786  Ospazio-1.5.0-macOS-arm64.vst3.zip
-c6953c6f261643ba13361b7be9245065665b2a6ffed953a27b3b68c4ce18c702  Ospazio-1.5.0-macOS-arm64.au.zip
+b16451343efe5c6c9620b0bd16cb94e6cb6f90ff8d1bf64c43368ca9dee8121f  Ospazio-1.5.0-Windows-x64.vst3.zip
+3fd6374b9a2b55489b773490d80e56484f34e8b3553e4812088cf0669dc46ea0  Ospazio-1.5.0-macOS-arm64.vst3.zip
+1ab3c2c183721356407fb00559c7170f1d1dc09168fee715b810497377dcbc94  Ospazio-1.5.0-macOS-arm64.au.zip
 ```
 
 Su macOS esegui `shasum -a 256 nome-archivio.zip`; su Windows usa `Get-FileHash .\nome-archivio.zip -Algorithm SHA256` in PowerShell. Sostituisci `nome-archivio.zip` con il file scaricato e confronta il risultato con la riga corrispondente.
@@ -76,11 +76,13 @@ I VST3 estratti dagli ZIP sono stati verificati con **453 controlli superati su 
 
 Copyright © 2026 Francesco Valla.
 
-- [LICENSE](LICENSE): licenza MIT per le parti originali di Ospazio e la documentazione.
+- [LICENSE](LICENSE): **PROPRIETARY SOFTWARE LICENSE** per le parti originali di Ospazio e la documentazione. Tutti i diritti riservati.
 - [NOTICE.md](NOTICE.md): avvisi relativi a Ospazio, JUCE e agli altri componenti incorporati.
 - [THIRD_PARTY_LICENSES.txt](THIRD_PARTY_LICENSES.txt): testi delle licenze e copyright delle dipendenze.
 
 JUCE e le altre dipendenze mantengono le proprie licenze. Gli avvisi sono inclusi anche in ogni plugin, nella cartella `Contents/Resources/Licenses/`.
+
+L'uso di Ospazio richiede l'espressa autorizzazione del titolare; modifiche, redistribuzione, sublicenza e vendita richiedono previa autorizzazione scritta, secondo i termini della licenza. I sorgenti sono riservati e accessibili solo a persone autorizzate. Per richieste di permesso: [vallaproductionsoriginal@gmail.com](mailto:vallaproductionsoriginal@gmail.com).
 
 ## Supporto
 

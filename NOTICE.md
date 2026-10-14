@@ -4,11 +4,11 @@ Ospazio è un prodotto di **Valla Productions**.
 
 Copyright (c) 2026 Francesco Valla.
 
-La licenza MIT nel file LICENSE riguarda esclusivamente le parti originali di Ospazio e la documentazione di Francesco Valla. Queste parti sono distribuite in forma compilata; il codice sorgente non viene fornito in questa release. Non si concedono diritti sui componenti di terze parti oltre a quelli previsti dalle rispettive licenze.
+La PROPRIETARY SOFTWARE LICENSE nel file LICENSE riguarda esclusivamente le parti originali di Ospazio e la documentazione di Francesco Valla. Tutti i diritti riservati. L'uso richiede l'espressa autorizzazione del titolare; modifiche, redistribuzione, sublicenza e vendita richiedono previa autorizzazione scritta, secondo i termini della licenza. I sorgenti sono riservati e accessibili solo a persone autorizzate; non vengono forniti in questa release. Per richieste di permesso: [vallaproductionsoriginal@gmail.com](mailto:vallaproductionsoriginal@gmail.com). Non si concedono diritti sui componenti di terze parti oltre a quelli previsti dalle rispettive licenze.
 
 ## JUCE
 
-Il plugin incorpora JUCE 9.0.3, Copyright (c) Raw Material Software Limited, utilizzato sotto licenza JUCE Starter. I diritti sul framework rimangono a Raw Material Software Limited. JUCE non viene riconcesso sotto MIT.
+Il plugin incorpora JUCE 9.0.3, Copyright (c) Raw Material Software Limited, utilizzato sotto licenza JUCE Starter. I diritti sul framework rimangono a Raw Material Software Limited. JUCE mantiene la propria licenza.
 
 Termini applicabili: https://juce.com/legal/juce-9-licence/
 
