@@ -47,7 +47,7 @@ The three archives contain the **compiled plugins**, with licence notices inside
 
 Width changes existing stereo information. For a mono source, use Spread or Depth to create a Side component.
 
-The **All controls** panel exposes all 213 parameters, including band links, external sidechain detection, crossover modes, oversampling, preamp saturation and additional Mid/Side monitoring options. Links use the **Low** band's settings as their reference.
+The **All controls** panel exposes, including band links, external sidechain detection, crossover modes, oversampling, preamp saturation and additional Mid/Side monitoring options. Links use the **Low** band's settings as their reference.
 
 ## A quick starting workflow
 
