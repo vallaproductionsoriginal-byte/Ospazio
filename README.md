@@ -1,66 +1,107 @@
 # Ospazio
 
-**Plugin gratuito di stereo imaging multibanda di Valla Productions.**
+**Free multiband stereo imaging plugin by Valla Productions.**
 
-Ospazio permette di controllare larghezza, distribuzione e bilanciamento stereo fino a **otto bande**, con analizzatore di spettro e visualizzazione della larghezza stereo in uscita.
+Shape where your mix feels focused and where it opens up. Ospazio gives you independent control over stereo width, spread and depth across **up to eight frequency bands**, with visual feedback to help you judge the result.
 
-**Versione 1.5.0**
+Keep the low end centred, give synths and pads more space, or widen the top end of a drum bus while keeping its low frequencies focused. Use it on individual tracks, buses or a full mix to shape the stereo image by frequency.
 
-![Interfaccia di Ospazio 1.5.0: spettro, campo stereo e controlli per cinque bande](assets/Ospazio-editor.png)
+**Version 1.5.0 · VST3 for Windows x64 and macOS Apple Silicon · AU for macOS Apple Silicon**
+
+![Ospazio 1.5.0 interface showing the spectrum, stereo field and controls for five bands](assets/Ospazio-editor.png)
 
 ## Download
 
-Scegli il formato supportato dalla tua DAW:
+Choose the format supported by your DAW:
 
-| Sistema | Formato | Download |
+| System | Format | Download |
 | --- | --- | --- |
 | Windows x64 | VST3 | [Ospazio-1.5.0-Windows-x64.vst3.zip](https://github.com/vallaproductionsoriginal-byte/Ospazio/releases/download/v1.5.0/Ospazio-1.5.0-Windows-x64.vst3.zip) |
 | macOS Apple Silicon | VST3 | [Ospazio-1.5.0-macOS-arm64.vst3.zip](https://github.com/vallaproductionsoriginal-byte/Ospazio/releases/download/v1.5.0/Ospazio-1.5.0-macOS-arm64.vst3.zip) |
 | macOS Apple Silicon | Audio Unit (AU) | [Ospazio-1.5.0-macOS-arm64.au.zip](https://github.com/vallaproductionsoriginal-byte/Ospazio/releases/download/v1.5.0/Ospazio-1.5.0-macOS-arm64.au.zip) |
 
-[Pagina della release](https://github.com/vallaproductionsoriginal-byte/Ospazio/releases/tag/v1.5.0)
+[Release page](https://github.com/vallaproductionsoriginal-byte/Ospazio/releases/tag/v1.5.0)
 
-I tre archivi contengono i **plugin compilati**, con gli avvisi di licenza inclusi nei bundle. Il repository distribuisce questi download, il README e le licenze; **il codice sorgente non è pubblicato**.
+The three archives contain the **compiled plugins**, with licence notices inside the bundles. This repository distributes the downloads, documentation and licences; **the source code is not published**.
 
-## Funzioni principali
+## What it brings to a production
 
-- Da una a otto bande, con controlli di Width, Spread, Depth e Gain.
-- Controlli Phase Limit e Phase Align per ciascuna banda, insieme a limiter, solo, mute e bypass.
-- Analizzatore di spettro e vista Stereo Width per osservare la larghezza stereo per frequenza.
-- Divisione, unione e regolazione delle bande direttamente sullo spettro.
-- Gain di ingresso e uscita, Dry/Wet, sidechain esterno e collegamento dei controlli tra bande.
-- Preset, automazione e salvataggio dello stato nella sessione della DAW.
+- **A focused low end:** narrow the bass region independently of the rest of the track.
+- **More room for musical layers:** widen pads, synths, guitars or backing vocals in the frequency ranges that benefit from it.
+- **Space for mono sources:** use Spread to generate stereo differences from the centre signal, then blend the effect to taste.
+- **Control over an uneven stereo image:** use Phase Align to reduce left/right energy imbalance within a band.
+- **Feedback while you work:** watch the stereo field, correlation meters and frequency-based width display, and check how your decisions translate to mono.
 
-## Requisiti
+## The main controls
 
-| Sistema | Requisiti |
+| Control | What you hear or do |
 | --- | --- |
-| Windows | Windows 10/11 x64 e DAW a 64 bit con supporto VST3. |
-| macOS | Mac Apple Silicon (arm64), macOS 11.0 o successivo e DAW con supporto VST3 oppure AU. |
+| **Width** | Adjusts the Side component in each band. With Spread and Depth at zero, 0% collapses that band to mono, 100% leaves its original width unchanged and values above 100% increase its stereo width. |
+| **Spread** | Adds stereo differences using delay, allpass diffusion or a blend of both. Useful for giving a centred sound more space; the advanced controls include a separate Spread mix. |
+| **Depth** | Reduces the Mid component and adds diffused Side signal, changing the balance between the centre and the surrounding stereo image. |
+| **Gain** | Adjusts the level of each band. |
+| **Phase Limit** | With **Limit** enabled, controls how much excess Side energy is reduced: 0% applies no phase correction, 100% applies the full calculated correction. The band's peak limiter remains active at either setting. |
+| **Phase Align** | Gradually balances the average left/right energy of a band while preserving stereo timing differences. Works independently of Limit; it does not time-align separate recordings. |
+| **Solo / Mute / Bypass** | Isolate, silence or compare the processing of an individual band. |
+| **Dry/Wet and input/output gain** | Blend the processed signal and match levels when comparing settings. |
 
-Per **Logic Pro** usa il formato **AU**. Le build Mac di questa release sono per Apple Silicon; non è inclusa una build Mac Intel.
+Width changes existing stereo information. For a mono source, use Spread or Depth to create a Side component.
 
-## Installazione
+The **All controls** panel exposes all 213 parameters, including band links, external sidechain detection, crossover modes, oversampling, preamp saturation and additional Mid/Side monitoring options. Links use the **Low** band's settings as their reference.
 
-1. Scarica ed estrai lo ZIP del formato scelto.
-2. Copia **l'intera cartella del plugin**, conservando tutti i file al suo interno, nella cartella indicata qui sotto.
-3. Riavvia la DAW ed esegui una nuova scansione dei plugin.
+## A quick starting workflow
 
-| Plugin | Bundle da copiare | Cartella di installazione |
+1. Insert Ospazio on a track or bus and choose the number of bands you need.
+2. Drag the crossover lines to separate the low end from the ranges you want to open up. **Double-click** the spectrum to split a band; **right double-click** a band to merge it with its neighbour. On macOS, Ctrl + double-click also works for merging.
+3. Start with **Width at 100%**, **Spread at 0** and **Depth at 0**. Narrow the lowest band if needed, then increase width in the upper bands in small steps.
+4. Add Spread or Depth where the sound needs more space. Use Solo to hear each band's contribution, then judge it again in the full mix.
+5. Enable **Limit** and adjust **Phase Limit** where widening needs restraint. Check the correlation meters and audition the result in mono using your DAW's monitoring tools.
+6. Match the output level, compare with Power off and use Dry/Wet to settle on the amount of processing.
+
+Six factory presets provide starting points. **Save/Load** writes and reads `.ospreset` files; your DAW also saves the plugin state with the session. Controls support host automation.
+
+### Reading the displays
+
+The spectrum shows the **input after input gain**. Enable **Stereo Width** to see the **output width by frequency**, measured after processing, limiting and Dry/Wet.
+
+The width display reads **0% for mono**, **100% for equal Mid/Side energy** and **200% for Side only**. Pink regions above 100% indicate that Side energy exceeds Mid energy. This is a measurement of the audio, so its percentage is different from the Width knob setting. Hover over the curve to inspect a frequency. Band splitting, merging and crossover dragging work in either view.
+
+Phase Limit helps restrain excessive width, but does not guarantee a minimum correlation for the final mix. Lower amounts can leave negative correlation; full protection can silence a signal that contains only Side and no Mid. The per-band peak limiter does not provide a global true-peak ceiling. Keep checking the complete mix and its mono playback.
+
+### Lookahead and latency
+
+At 48 kHz, latency is **4 ms with Lookahead off** and **9 ms with Lookahead on**. Lookahead gives the limiter detector 5 ms of advance. The plugin reports latency changes to the DAW; compensation depends on the host, and switching Lookahead during playback may cause a brief transient.
+
+## Requirements
+
+| System | Requirements |
+| --- | --- |
+| Windows | Windows 10/11 x64 and a 64-bit DAW with VST3 support. |
+| macOS | An Apple Silicon Mac (arm64), macOS 11.0 or later and a DAW with VST3 or AU support. |
+
+For **Logic Pro**, use **AU**. The Mac builds in this release are for Apple Silicon; an Intel Mac build is not included.
+
+## Installation
+
+1. Download and extract the ZIP for your chosen format.
+2. Copy the **entire plugin folder or bundle**, keeping every file inside it, to the location below.
+3. Restart your DAW and rescan its plugins.
+
+| Plugin | Folder or bundle to copy | Installation location |
 | --- | --- | --- |
 | Windows VST3 | `Ospazio.vst3` | `C:\Program Files\Common Files\VST3\` |
 | Mac VST3 | `Ospazio.vst3` | `~/Library/Audio/Plug-Ins/VST3/` |
 | Mac AU | `Ospazio.component` | `~/Library/Audio/Plug-Ins/Components/` |
 
-Su Mac, apri **Finder → Vai → Vai alla cartella** e incolla il percorso; crea la cartella se manca. In Logic Pro cerca **Valla Productions → Ospazio** tra gli effetti Audio Unit e, se necessario, ripeti la scansione da Gestione plug-in. Il bundle AU mantiene l'estensione `.component`.
+On Mac, open **Finder → Go → Go to Folder** and paste the path; create the folder if needed. In Logic Pro, look for **Valla Productions → Ospazio** among the Audio Unit effects and rescan in Plug-in Manager if necessary. The AU bundle keeps its `.component` extension.
 
-Su Windows puoi usare anche una cartella VST3 configurata nella DAW. Conserva la struttura `Ospazio.vst3\Contents\x86_64-win\Ospazio.vst3`. Il runtime Visual C++ è collegato staticamente al plugin.
+On Windows, you can also use a VST3 folder configured in your DAW. Preserve the structure `Ospazio.vst3\Contents\x86_64-win\Ospazio.vst3`. The Visual C++ runtime is linked statically into the plugin.
 
-I bundle Mac hanno firma locale ad hoc e non sono notarizzati da Apple. Il VST3 Windows non ha firma Authenticode.
+The Mac bundles use a local ad hoc signature and are not notarised by Apple. The Windows VST3 has no Authenticode signature.
 
-## Verifica dei download
+## Download verification
 
-I checksum SHA-256 dei pacchetti con licenza aggiornata il 15 ottobre 2026 sono:
+SHA-256 checksums for the packages with licences updated on 15 October 2026:
 
 ```text
 b16451343efe5c6c9620b0bd16cb94e6cb6f90ff8d1bf64c43368ca9dee8121f  Ospazio-1.5.0-Windows-x64.vst3.zip
@@ -68,22 +109,22 @@ b16451343efe5c6c9620b0bd16cb94e6cb6f90ff8d1bf64c43368ca9dee8121f  Ospazio-1.5.0-
 1ab3c2c183721356407fb00559c7170f1d1dc09168fee715b810497377dcbc94  Ospazio-1.5.0-macOS-arm64.au.zip
 ```
 
-Su macOS esegui `shasum -a 256 nome-archivio.zip`; su Windows usa `Get-FileHash .\nome-archivio.zip -Algorithm SHA256` in PowerShell. Sostituisci `nome-archivio.zip` con il file scaricato e confronta il risultato con la riga corrispondente.
+On macOS, run `shasum -a 256 archive-name.zip`; on Windows, use `Get-FileHash .\archive-name.zip -Algorithm SHA256` in PowerShell. Replace `archive-name.zip` with the downloaded filename and compare the result with the corresponding line above.
 
-I VST3 estratti dagli ZIP sono stati verificati con **453 controlli superati su macOS e 453 su Windows x64**, inclusi test DSP e caricamento nell'host VST3. La compatibilità dipende anche dalla DAW e dalla sua versione.
+The VST3 plugins extracted from the ZIPs were verified with **453 checks passed on macOS and 453 on Windows x64**, including DSP tests and loading in a VST3 test host. These are the existing release verification results; compatibility also depends on your DAW and its version.
 
-## Licenze e avvisi delle dipendenze
+## Licences and dependency notices
 
 Copyright © 2026 Francesco Valla.
 
-- [LICENSE](LICENSE): **PROPRIETARY SOFTWARE LICENSE** per le parti originali di Ospazio e la documentazione. Tutti i diritti riservati.
-- [NOTICE.md](NOTICE.md): avvisi relativi a Ospazio, JUCE e agli altri componenti incorporati.
-- [THIRD_PARTY_LICENSES.txt](THIRD_PARTY_LICENSES.txt): testi delle licenze e copyright delle dipendenze.
+- [LICENSE](LICENSE): **PROPRIETARY SOFTWARE LICENSE** for the original Ospazio components and documentation. All rights reserved.
+- [NOTICE.md](NOTICE.md): notices for Ospazio, JUCE and other incorporated components.
+- [THIRD_PARTY_LICENSES.txt](THIRD_PARTY_LICENSES.txt): dependency licence texts and copyright notices.
 
-JUCE e le altre dipendenze mantengono le proprie licenze. Gli avvisi sono inclusi anche in ogni plugin, nella cartella `Contents/Resources/Licenses/`.
+JUCE and other dependencies retain their own licences. Notices are also included in each plugin under `Contents/Resources/Licenses/`.
 
-L'uso di Ospazio richiede l'espressa autorizzazione del titolare; modifiche, redistribuzione, sublicenza e vendita richiedono previa autorizzazione scritta, secondo i termini della licenza. I sorgenti sono riservati e accessibili solo a persone autorizzate. Per richieste di permesso: [vallaproductionsoriginal@gmail.com](mailto:vallaproductionsoriginal@gmail.com).
+Use of Ospazio requires the copyright holder's express authorisation. Modification, redistribution, sublicensing and sale require prior written permission under the licence terms. Source code is confidential and accessible only to authorised people. Permission requests: [vallaproductionsoriginal@gmail.com](mailto:vallaproductionsoriginal@gmail.com).
 
-## Supporto
+## Support
 
-Per segnalare un problema, apri una [issue](https://github.com/vallaproductionsoriginal-byte/Ospazio/issues) indicando sistema operativo, DAW e versione, formato del plugin, frequenza di campionamento e passaggi per riprodurlo.
+To report a problem, open an [issue](https://github.com/vallaproductionsoriginal-byte/Ospazio/issues) with your operating system, DAW and version, plugin format, sample rate and steps to reproduce it.
